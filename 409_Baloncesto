@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE equipos_de_baloncesto [
+  <!ELEMENT equipos_de_baloncesto (equipo, equipo)>
+  <!ELEMENT equipo (nombre, ciudad, entrenador, jugadores)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT ciudad (#PCDATA)>
+  <!ELEMENT entrenador (#PCDATA)>
+  <!ELEMENT jugadores (jugador+)>
+  <!ELEMENT jugador (nombre, posicion, nacionalidad)>
+  <!ATTLIST jugador
+    posicion (Base|Escolta|Alero|Pivot) #REQUIRED
+  >
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT posicion (#PCDATA)>
+  <!ELEMENT nacionalidad (#PCDATA)>
+]>
+
+<equipos_de_baloncesto>
+  <equipo>
+    <nombre>Equipo A</nombre>
+    <ciudad>Barcelona</ciudad>
+    <entrenador>Juan Martínez</entrenador>
+    <jugadores>
+      <jugador posicion="Base">
+        <nombre>Carlos López</nombre>
+        <nacionalidad>Español</nacionalidad>
+      </jugador>
+      <jugador posicion="Escolta">
+        <nombre>Marta Sánchez</nombre>
+        <nacionalidad>Argentino</nacionalidad>
+      </jugador>
+      <jugador posicion="Alero">
+        <nombre>Andrés Rodriguez</nombre>
+        <nacionalidad>Mexicano</nacionalidad>
+      </jugador>
+      <jugador posicion="Pivot">
+        <nombre>Laura García</nombre>
+        <nacionalidad>Estadounidense</nacionalidad>
+      </jugador>
+    </jugadores>
+  </equipo>
+  
+  <equipo>
+    <nombre>Equipo B</nombre>
+    <ciudad>Madrid</ciudad>
+    <entrenador>Maria González</entrenador>
+    <jugadores>
+      <jugador posicion="Base">
+        <nombre>Javier Ramírez</nombre>
+        <nacionalidad>Colombiano</nacionalidad>
+      </jugador>
+      <jugador posicion="Escolta">
+        <nombre>Ana Martínez</nombre>
+        <nacionalidad>Italiana</nacionalidad>
+      </jugador>
+      <jugador posicion="Alero">
+        <nombre>Ricardo Gómez</nombre>
+        <nacionalidad>Francesa</nacionalidad>
+      </jugador>
+      <jugador posicion="Pivot">
+        <nombre>Elena Ruiz</nombre>
+        <nacionalidad>Australiano</nacionalidad>
+      </jugador>
+    </jugadores>
+  </equipo>
+</equipos_de_baloncesto>
